@@ -66,6 +66,10 @@ Session management using `express-session`.
 HTTP cookies with the `httpOnly` and `secure` flags.
 Rate limiting using `express-rate-limit`.
 And many more.
+---
+
+### IMPORTANT
+This repository is made to run along with another service (repository). You can find that repo in here [link](https://github.com/Anuradha2k21/student-management?tab=readme-ov-file)
 
 ## Collaborators
 
