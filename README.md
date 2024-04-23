@@ -1,5 +1,8 @@
-# Auth-Flow
-
+# USER SIGNUP SIGNIN
+### IMPORTANT
+I am not the first author of this repo. Me and my team added a google reCAPTCHA and a new UI and multiple security improvements. You can visit the author's repo by using this link
+[init0x1/Auth-Flow](https://github.com/init0x1/Auth-Flow)
+---
 This project is a simple user authentication system that uses Express.js and MongoDB to store user data. The system allows users to sign up and log in, and it also includes session management and rate limiting to prevent brute-force attacks.
 
 ## Dependencies
@@ -12,6 +15,10 @@ This project uses several dependencies, including:
 - `express-session`: Middleware for managing sessions
 - `express-rate-limit`: Middleware for rate limiting HTTP requests
 - `morgan`: Middleware for logging HTTP requests
+- `dotenv`
+- `axios`
+- `crypto`
+- `querystring`
 
 ## Getting Started
 
@@ -19,17 +26,25 @@ To get started with this project, follow these steps:
 
 1) Clone the repository and navigate to the project directory:
 ```bash
-git clone https://github.com/0xAbdoAli/Auth-Flow
+git clone https://github.com/Anuradha2k21/Sign-in_and_Sign-up
 ```
+
 2) Install the dependencies using npm:
 ```bash
 npm install
 ```
-3) Start the server:
+3) create a `.env` file in the root directory and create two variables named `MONGOOSE_CON_STRING` and `CAPTCHA_SECRET` give values as followings
+    - `MONGOOSE_CON_STRING` - connection string of the mongodb database (either local or mongodb atlas)
+    - `CAPTCHA_SECRET` - google reCAPTCHA **SECRET KEY** (when creating a new google reCAPTCHA, add a *domain* as `localhost` if you are running on a local machine. Give reCAPTCHA type as *Challenge (v2)/
+"I'm not a robot" Checkbox* and fill other fields with appropriate details. picture shown below)
+    ![alt text](image-1.png)
+    Go to this link to create a new Google reCAPTCHA → [link](https://www.google.com/recaptcha/about/)
+4) go to **/public/index.html and /public/signup.html** and assign *data-sitekey=""*  *(at line 60)* to the **SITE KEY** from the created *reCAPTCHA* key.
+4) Start the server:
 ```bash
-npm run start
+npm start
 ```
-4) Open a web browser and navigate to `http://localhost:3000`
+5) Open a web browser and navigate to `http://localhost:3000`
 
 
 ## Usage
@@ -50,3 +65,10 @@ To improve the security of the user authentication system, several measures have
 Session management using `express-session`.
 HTTP cookies with the `httpOnly` and `secure` flags.
 Rate limiting using `express-rate-limit`.
+And many more.
+
+## Collaborators
+
+- [Adithya](https://github.com/adithya-yashodhi?query=anuradhasanjaya2024%40gmail.com)
+- [Umandi](https://github.com/ThisaruUmandi)
+- [Hansani](https://github.com/Samudi1234)
